@@ -19,6 +19,5 @@ public class Main {
         }
 
         return (byte) (p - cont);
-
     }
 }

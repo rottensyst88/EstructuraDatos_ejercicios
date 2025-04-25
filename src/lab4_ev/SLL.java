@@ -1,13 +1,14 @@
 package lab4_ev;
 
-public class SLL extends SLLBase {
+public class
+SLL extends SLLBase {
      
      @Override
      public void insert(int val) {
          ListNode dato = new ListNode(val);
 
          // cabeza de la lista vacia (no existente)
-         if(isEmpty()){
+         //if(isEmpty()){
              head = dato;
              return;
          }

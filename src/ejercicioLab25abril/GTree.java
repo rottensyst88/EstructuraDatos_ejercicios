@@ -2,10 +2,33 @@ package ejercicioLab25abril;
 
 public class GTree extends GTreeBase {
 
-    //Las implementaciones deben utilllizar la clase Queue y no recursividad.
-
     @Override
-    public Queue LevelOrder() {
+    public Queue LevelOrder(){
+        Queue resultado = new Queue();
+
+        if(root == null) return null;
+
+        Queue auxiliar = new Queue();
+        auxiliar.add(root);
+
+        while(!auxiliar.isEmpty()){
+            TreeNode curr = auxiliar.poll();
+            resultado.add(curr);
+
+            if (curr.child != null){
+                auxiliar.add(curr.child);
+            }
+
+            for (TreeNode Hrmano = curr.child; Hrmano != null && Hrmano.sibling != null; Hrmano = Hrmano.sibling){
+                auxiliar.add(Hrmano.sibling);
+            }
+        }
+
+        return resultado;
+    }
+
+
+    public Queue NotLevelOrder() {
         Queue q = new Queue();
         TreeNode raiz_og = root;
 

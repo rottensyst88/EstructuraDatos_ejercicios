@@ -40,13 +40,12 @@ public class Lista {
 
          */
         Nodo z = null;
-        for(Nodo x = l2.head; x.siguiente != null; x=x.siguiente ) {
-            if(x.objeto == l1.head.objeto) {
+        for (Nodo x = l2.head; x.siguiente != null; x = x.siguiente) {
+            if (x.objeto == l1.head.objeto) {
                 z = x;
                 break;
             }
         }
-
-        while () {}
+        return true;
     }
 }
